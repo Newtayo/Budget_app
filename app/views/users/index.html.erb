@@ -1,0 +1,19 @@
+<nav>
+  <button id="hamburger-btn">&#9776;</button>
+  <ul id="menu">
+  <li>About</li>
+    <li><%= link_to "Login", new_user_session_path %></li>
+    <li><%= link_to "Sign up",  new_user_registration_path %></li>
+  </ul>
+  <h1 class ="header"> Home</h1>
+</nav>
+<div class = "content">
+<h2>Welcome to Budget App</h2>
+<p> This application help the user keep tracks of there spendings. <br>Items are grouped into categories and
+ expenses can be stored under the group they belong to. <br> Users can have access to the amounts they spend
+in each category by simply clicking on the category.  
+</p><br>
+<p> Kindly sign up to start using the application or login if you already have an account</p>
+<li><%= button_to "Sign out", destroy_user_session_path, method: :delete  %></li>
+
+<div>
