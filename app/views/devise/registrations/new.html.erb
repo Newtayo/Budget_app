@@ -1,0 +1,30 @@
+<nav>
+  <ul id="nav">
+  <li><%= link_to "Back", users_path, class: "back" %></li>
+  </ul>
+  <h1 class ="login"> Sign Up</h1>
+</nav>
+<div class = "login-content">
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <%= text_field_tag 'user[name]', nil, autofocus: true, placeholder: 'Name'%>
+
+  
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Enter your email' %>
+
+
+    
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: 'New Password' %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Password Confirmation' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up",  class: "submit-btn" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
