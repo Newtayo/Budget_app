@@ -1,0 +1,14 @@
+<nav>
+  <ul id="nav">
+  <li><%= link_to "Back", user_categories_path, class: "back" %></li>
+  </ul>
+  <h1 class ="login"> Categories</h1>
+  <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "logout"  %>
+</nav>
+<div class ="login-content">
+<%= form_with(model: @category, url: user_categories_path) do |form| %>
+      <%= form.text_field :name, placeholder: 'Name', class: "input"  %>
+      <%= form.text_field :icon, placeholder: 'Icon',  class: "input"  %>
+      <%= form.submit 'Submit', class: "form-btn" %>
+      </div>
+  <% end %>

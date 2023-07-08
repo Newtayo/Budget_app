@@ -64,8 +64,32 @@ ul#menu {
 
 .login {
   align-self: center;
-  margin-right: 35%;
+  margin-right: 20%;
   width: 60%;
+}
+
+.new-item {
+  display: flex;
+  width: 95%;
+  background-color: #5fb523;
+  padding: 1%;
+  align-items: center;
+  justify-content: center;
+  margin: 2% auto;
+}
+
+.new-item > a {
+  color: white;
+  border: 1px solid white;
+  text-decoration: none;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  padding-top: 5%;
+}
+
+.card > a {
+  text-decoration: none;
 }
 
 ul#menu li {
@@ -81,7 +105,8 @@ ul#menu li > a {
   color: white;
   text-decoration: none;
   background-color: transparent;
-  border: none;
+  width: 15vw;
+  font-size: 4vw;
 }
 
 .content {
@@ -91,7 +116,16 @@ ul#menu li > a {
   margin: auto;
   color: #615f5f;
   text-align: center;
-  background-color: #fff;
+}
+
+.budget {
+  width: 100%;
+  display: flex;
+  border: 2px solid black;
+  height: 60vh;
+  align-items: center;
+  justify-content: center;
+  margin: 2% auto;
 }
 
 .back {
@@ -128,6 +162,13 @@ ul#menu li > a {
   border-bottom: 1px solid #615f5f;
 }
 
+.signup {
+  text-decoration: none;
+  color: #615f5f;
+  margin-left: 43%;
+  align-self: center;
+}
+
 .action {
   width: 40vw;
   margin: 2% auto;
@@ -143,6 +184,63 @@ ul#menu li > a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.category-card {
+  display: flex;
+  width: 90%;
+  margin: 3% auto;
+  background-color: white;
+  padding: 2%;
+}
+
+.picture {
+  width: 5vw;
+}
+
+.category-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  font-size: 3vw;
+}
+
+.category-content > h2 {
+  text-decoration: none;
+}
+
+.new-category {
+  width: 40vw;
+  margin: auto;
+  background-color: transparent;
+  color: white;
+  border: none;
+  height: 5vh;
+  font-size: 4vw;
+}
+
+.card-payment {
+  display: flex;
+  width: 95%;
+  margin: 1% auto;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 3vw;
+}
+
+.payment {
+  display: flex;
+  width: 95%;
+  margin: 2% auto;
+  background-color: white;
+  justify-content: space-between;
+}
+
+.form-btn {
+  background-color: #5fb523;
+  color: white;
+  margin-top: 2%;
 }
 
 @media (max-width: 768px) {
@@ -234,5 +332,22 @@ ul#menu li > a {
   .action > a {
     text-align: center;
     text-decoration: none;
+  }
+
+  .category-card {
+    display: flex;
+    width: 90%;
+    margin: 3% auto;
+    background-color: white;
+    padding: 2%;
+  }
+
+  .picture {
+    width: 15vw;
+  }
+
+  .amt {
+    font-size: 3vw;
+    margin-left: 30%;
   }
 }

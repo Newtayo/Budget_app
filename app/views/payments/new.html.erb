@@ -1,0 +1,14 @@
+<nav>
+  <ul id="nav">
+  <li><%= link_to "Back", user_category_payments_path(user_id: @user.id, category_id: @category.id), class: "back" %></li>
+  </ul>
+  <h1 class ="login"> Transaction</h1>
+  <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "logout"  %>
+</nav>
+    <div class ="login-content">
+    <%= form_with(model: @payment, url: user_category_payments_path) do |form| %>
+          <%= form.text_field :name, placeholder: 'Name', class: "input"  %>
+          <%= form.text_field :amount, placeholder: 'Amount',  class: "input"  %>
+          <%= form.submit 'Submit', class: "form-btn" %>
+          </div>
+  <% end %>
