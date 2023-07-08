@@ -1,0 +1,28 @@
+<nav>
+  <ul id="nav">
+  <li><%= link_to "Back", users_path, class: "back" %></li>
+  </ul>
+  <h1 class ="login"> Categories</h1>
+  <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "logout"  %>
+</nav>
+
+<% @categories.each do |category| %>
+  <%@total_amount = category.payments.sum(:amount)%>
+  <div class ="card"> 
+  <%= link_to user_category_payments_path(user_id: @user.id, category_id:  category.id) do  %>
+    <div class ="category-card">  
+<img src="<%= category.icon %>" alt="User" class="picture" />
+<div class="category-content">
+<h2><%=category.name%></h2>
+<h2><%=category.created_at.strftime("%d-%m-%Y")%></h2>
+</div>
+<div class="amt">
+<h2>$<%=@total_amount%></h2>
+</div>
+</div>
+<%end%>
+</div>
+<%end%>
+<div class ="new-item">
+<%= link_to "New Category", new_user_category_path(user_id: @user.id), class:"new-category" %>
+</div>

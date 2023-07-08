@@ -1,0 +1,20 @@
+<nav>
+  <ul id="nav">
+  <li><%= link_to "Back", user_categories_path, class: "back" %></li>
+  </ul>
+  <h1 class ="login"> Transaction</h1>
+  <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "logout"  %>
+</nav>
+<div class="payment">
+<h2><%= @category.name %></h2>
+<h2>$<%=@payments.sum(:amount)%></h2>
+</div>
+<% @payments.each do |payment| %>
+    <div class ="card-payment"> 
+  <h2><%= payment.name %></h2>
+  <p>$<%= payment.amount %></p>
+  </div>
+<% end %>
+<div class ="new-item">
+<%= link_to "New Transaction", new_user_category_payment_path(user_id: @user.id, category_id: @category.id), class: "new-category" %>
+</div>
