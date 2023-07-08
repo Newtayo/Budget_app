@@ -23,7 +23,6 @@ RSpec.describe 'Category', type: :feature do
       expect(page).to have_content(@payment.amount)
     end
 
-
     it 'should render a button add food ' do
       expect(page).to have_content('Sign out')
     end

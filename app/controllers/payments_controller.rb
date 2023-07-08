@@ -17,7 +17,6 @@ class PaymentsController < ApplicationController
     @payment = @user.payments.new(payment_params)
     @payment.author = current_user
 
-
     if @payment.save
       @categorypayment = CategoryPayment.create(category: @category, payment: @payment)
       redirect_to user_category_payments_path(@category), notice: 'Transaction created successfully!'
