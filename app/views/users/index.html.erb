@@ -1,0 +1,18 @@
+<nav>
+  <button id="hamburger-btn">&#9776;</button>
+  <ul id="menu">
+  <li>About</li>
+    <li><%= link_to "Login", new_user_session_path %></li>
+    <li><%= link_to "Sign up",  new_user_registration_path %></li>
+  </ul>
+  <h1 class ="header"> Home</h1>
+</nav>
+<div class = "content">
+<div class ="budget">
+<h2>BudgetIT App</h2>
+</div>
+</div>
+<div class ="new-item">
+<%= link_to "Login",  new_user_session_path, class:"new-category" %>
+</div>
+<%= link_to "Sign up",  new_user_registration_path, class: "signup" %>
